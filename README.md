@@ -6,7 +6,7 @@ This code example has a three project structure: CM33 secure, CM33 non-secure, a
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc-edge-btstack-capsense-buttons-slider)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA0NjEiLCJTcGVjIE51bWJlciI6IjAwMi00MDQ2MSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IEVkZ2UgTUNVOiBCTEUgd2l0aCBDQVBTRU5TRSZ0cmFkZTsgYnV0dG9ucyBhbmQgc2xpZGVyIiwicmlkIjoic3VyZXNoa3VtYXJhIiwiRG9jIHZlcnNpb24iOiIyLjAuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA0NjEiLCJTcGVjIE51bWJlciI6IjAwMi00MDQ2MSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IEVkZ2UgTUNVOiBCTEUgd2l0aCBDQVBTRU5TRSZ0cmFkZTsgYnV0dG9ucyBhbmQgc2xpZGVyIiwicmlkIjoic3VyZXNoa3VtYXJhIiwiRG9jIHZlcnNpb24iOiIyLjAuMSIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 See the [Design and implementation](docs/design_and_implementation.md) for the functional description of this code example.
 
@@ -77,34 +77,29 @@ See [Using the code example](docs/using_the_code_example.md) for instructions on
 
    ![](images/figure1.png)
 
-5. To test the application, touch the CAPSENSE&trade; Button 0 (BTN0) to turn the LED ON, touch Button 1 (BTN1) to turn the LED OFF, and touch the slider in different positions to change the brightness
+5. To test the application, touch the CAPSENSE&trade; Button 0 (BTN0) to turn the USER LED1 ON, touch the CAPSENSE&trade; Button 1 (BTN1) to turn the USER LED1 OFF, and touch the CAPSENSE&trade; slider in different positions to change the brightness
 
-6. To test using the AIROC&trade; Bluetooth&reg; Connect App, do the following (see the equivalent AIROC&trade; Bluetooth&reg; Connect App screenshots in **Figure 2** and **Figure 3**):
+6. To test using the AIROC&trade; Bluetooth&reg; Connect App, do the following (see the equivalent AIROC&trade; Bluetooth&reg; Connect App screenshots in **Figure 2** and **Figure 3**): <br>
 
-    1. Turn ON Bluetooth&reg; and Location on your Android or iOS device
+   a. Turn ON Bluetooth&reg; and Location on your Android or iOS device
 
-    2. Launch the AIROC&trade; Bluetooth&reg; Connect App
+   b. Launch the AIROC&trade; Bluetooth&reg; Connect App
 
-    3. The LED2 starts blinking once you program the application indicating that advertisement has started. Advertising will stop after 90 seconds if a connection has not been established
+   c. The USER LED2 starts blinking once you program the application indicating that advertisement has started. Advertising will stop after 90 seconds if a connection has not been established
 
-    4. Swipe down on the AIROC&trade; Bluetooth&reg; Connect App home screen to start scanning for Bluetooth&reg; LE Peripheral devices. Your device named "CAPSENSE&trade; Button Slider" displays in the AIROC&trade; Bluetooth&reg; Connect App home screen. Select your device to establish a Bluetooth&reg; LE connection
+   d. Swipe down on the AIROC&trade; Bluetooth&reg; Connect App home screen to start scanning for Bluetooth&reg; LE Peripheral devices. Your device named "CAPSENSE&trade; Button Slider" displays in the AIROC&trade; Bluetooth&reg; Connect App home screen. Select your device to establish a Bluetooth&reg; LE connection. Two services are shown in the AIROC&trade; Bluetooth&reg; Connect carousel view
 
-       Two services are shown in the AIROC&trade; Bluetooth&reg; Connect carousel view
+   e. Tap on the **CAPSENSE&trade; Slider** profile from the services. Touch the CAPSENSE&trade; slider and change its position on the board. It changes the slider graphic pattern on the app screen. Additionally, the brightness of the LED changes based on the slider position
 
-    6. Tap on the **CAPSENSE&trade; Slider** profile from the services. Touch the slider and change its position on the board. It changes the slider graphic pattern on the app screen. Additionally, the brightness of the LED changes based on the slider position
+   f. Tap on the **CAPSENSE&trade; Buttons** profile from the services. Touch CAPSENSE&trade; Button 0 (BTN0) and CAPSENSE&trade; Button 1 (BTN1) on the board to change the button graphic on the app screen; the USER LED 1 status toggles ON/OFF <br> **Figure 2** and **Figure 3** show the steps for using the AIROC&trade; Bluetooth&reg; Connect App on iOS and Android respectively <br> 
+    
+   **Figure 2. Testing with the AIROC&trade; Bluetooth&reg; Connect App on iOS** <br> 
+    
+   ![](images/figure2.png)
 
-    7. Tap on the **CAPSENSE&trade; Buttons** profile from the services. Touch Button 0 (BTN0) and Button 1 (BTN1) on the board to change the button graphic on the app screen; the LED status toggles ON/OFF
+   **Figure 3. Testing with the AIROC&trade; Bluetooth&reg; Connect App on Android**
 
-       **Figure 2** and **Figure 3** show the steps for using the AIROC&trade; Bluetooth&reg; Connect App on iOS and Android respectively
-
-       **Figure 2. Testing with the AIROC&trade; Bluetooth&reg; Connect App on iOS**
-
-       ![](images/figure2.png)
-
-
-       **Figure 3. Testing with the AIROC&trade; Bluetooth&reg; Connect App on Android**
-
-       ![](images/figure3.png)
+   ![](images/figure3.png)
 
 
 ## Program a PSOC&trade; 4000T device using the DFU Host Tool
@@ -144,11 +139,11 @@ To send the commands, a USB-to-I2C bridge and a I2C serial terminal software lik
 
 To switch to the bootloader while the application is running, follow these steps: 
 
-1. Open Bridge Control Panel and select the KitProg3 port from the "Connected I2C/SPI/Rx8 Ports tab
+1. Open Bridge Control Panel and select the KitProg3 port from the "Connected I2C/SPI/Rx8 Ports tab"
 2. Select I2C from the Protocol tab
 3. Enter the below command and click the send button 
 
-   > **Note:** `0x09` is the I2C address provided in the application to switch back to the bootloader<br>
+   > **Note:** `0x09` is the I2C address provided in the application to switch back to the bootloader <br>
 
    ```
    w 09 01 EA 17 p
@@ -162,11 +157,12 @@ To switch to the bootloader while the application is running, follow these steps
 ## Erase the application on PSOC&trade; Edge E84 MCU
 
 1. Open the erase_app/common.sh file and modify the below details,
-      - CM33_AP_SN=100D0F5102122400 . Update with the serial number of the device connected. To get the serial number of the connected device, Open modus-shell application ({ModusToolbox™ install directory}/tools_<version>/modus-shell/Cygwin.bat) and use the below command in Modus Shell.
+      - CM33_AP_SN=100D0F5102122400 . Update with the serial number of the device connected. To get the serial number of the connected device, Open modus-shell application ({ModusToolbox™ install directory}/tools_<version>/modus-shell/Cygwin.bat) and use the below command in Modus Shell. <br>
+      
+   ``` 
+   fw-loader --device-list 
+   ```
 
-        ```
-         fw-loader --device-list
-        ```
 2. Make sure the path to the OpenOCD is correctly mentioned in the erase_app/common.sh file. 
 
 3. Open modus-shell application ({ModusToolbox™ install directory}/tools_<version>/modus-shell/Cygwin.bat) and navigate to the application_folder/erase_app and run the erase_smif.sh by entering `./erase_smif_epc2.sh` or `./erase_smif_epc4.sh` based on the BSP chosen to erase existing application in PSOC&trade; Edge MCU.
@@ -199,6 +195,7 @@ Document title: *CE240461* – *PSOC&trade; Edge MCU: Bluetooth&reg; LE with CAP
  ------- | ---------------------
  1.x.0   | New code example <br> Early access release
  2.0.0   | GitHub release
+ 2.0.1   | Updated README.md 
 <br>
 
 
